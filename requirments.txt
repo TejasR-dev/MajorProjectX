@@ -1,0 +1,10 @@
+streamlit
+streamlit-option-menu
+streamlit-lottie
+pandas
+numpy
+scikit-learn
+joblib
+plotly
+requests
+fpdf
