@@ -32,8 +32,8 @@ VECTORIZER_FILE = "vectorizer.pkl"
 METRICS_FILE = "metrics.csv"
 
 try:
-    GOOGLE_API_KEY = st.secrets["AIzaSyC2xXML-G6Cszn8o6KKbllvYizVLFtTbhA"]
-    GOOGLE_CSE_ID = st.secrets["35d9aee8055db469f"]
+    GOOGLE_API_KEY = st.secrets["Your_actual_api_key"]
+    GOOGLE_CSE_ID = st.secrets["Your_actual_cse_id"]
 except Exception:
     GOOGLE_API_KEY = ""
     GOOGLE_CSE_ID = ""
@@ -507,4 +507,5 @@ elif page == "⚙️ Settings":
             met = pd.read_csv(METRICS_FILE)
             st.line_chart(met.set_index("timestamp")['accuracy'])
             st.write(f"Current Accuracy: {met['accuracy'].iloc[-1]:.2%}")
+
         except: st.info("No training history available.")
